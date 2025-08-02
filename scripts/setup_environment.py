@@ -36,7 +36,7 @@ def setup_environment():
         print(f"✅ requirements.txt written to: {requirements_path}")
 
         print("📦 Installing dependencies...")
-        subprocess.check_call(["pip", "install"] + requirements)
+        subprocess.check_call(["python3", "-m", "pip", "install"] + requirements)
         print("✅ All dependencies installed successfully.")
 
     except subprocess.CalledProcessError as e:

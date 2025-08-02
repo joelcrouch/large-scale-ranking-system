@@ -1,0 +1,31 @@
+datasets:
+  amazon_reviews:
+    categories:
+    - Electronics
+    - Books
+    - Movies_and_TV
+    format: json.gz
+    url: https://amazon-reviews-pds.s3.amazonaws.com/
+  movielens:
+    format: csv
+    url: https://files.grouplens.org/datasets/movielens/ml-25m.zip
+feature_engineering:
+  interaction_features:
+  - rating
+  - timestamp
+  - helpful_votes
+  item_features:
+  - category
+  - price
+  - rating
+  - description
+  user_features:
+  - age
+  - gender
+  - occupation
+preprocessing:
+  min_item_interactions: 5
+  min_user_interactions: 5
+  random_state: 42
+  test_size: 0.2
+  val_size: 0.1

@@ -1,0 +1,12 @@
+data:
+  feature_store_path: data/features
+  processed_data_path: data/processed
+  raw_data_path: data/raw
+  splits_path: data/splits
+logging:
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  level: INFO
+project:
+  description: Production-ready ranking system
+  name: large-scale-ranking-system
+  version: 0.1.0

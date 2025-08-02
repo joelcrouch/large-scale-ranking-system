@@ -20,7 +20,121 @@ Dataset Selection & Acquisition (Days 1-2)
 
 Download Amazon Product Reviews dataset (multiple categories)
 Secondary dataset download (MovieLens for methodology validation)
+
+*   **Action:** Downloaded MovieLens dataset using `python3 -c "from pathlib import Path; from scripts.data_utils.dataset_manager import DatasetManager; dm = DatasetManager(Path('/home/dev1/dev/large-scale-ranking-system')); dm.download_movielens()"`.
+    *   **Explanation:** This command executes a Python one-liner that initializes the `DatasetManager` with the project root and then calls its `download_movielens()` method. This method handles fetching the MovieLens dataset from its source and extracting it into the `data/raw` directory.
+*   **Action:** Initiated Amazon dataset download using `scripts/amz_data_setup.py` for the `Clothing_Shoes_and_Jewelry` category.
+    *   **Explanation:** This script downloads and preprocesses the Amazon Reviews 2023 dataset from the McAuley Lab. It handles both review data and metadata, converting them to a standard format and saving them into `data/processed/amazon_<category>` directories. This is a very large dataset and will take a significant amount of time to complete.
 Set up development environment (Python, PyTorch, Jupyter, Git)
+*****STUCK HERE DUE TO LACK OF SPACE/VOLUME ON VM-CONSIDERING DIFFERENT SOLUTIONS:  EXPAND VM VOLUME, Delete some STuff :  HERE ARE THE STEPS 
+
+
+Here are the general steps:
+
+  Part 1: Expand the Virtual Hard Disk (on the Hyper-V Host)
+
+
+   1. Shut down the Virtual Machine: Ensure the VM is in an "Off" state
+      in Hyper-V Manager. You cannot expand a disk while the VM is
+      running or saved.
+   2. Open Hyper-V Manager:
+       * Search for "Hyper-V Manager" in your Windows search bar and open
+         it.
+   3. Select the VM:
+       * In the left pane, select your Hyper-V host.
+       * In the "Virtual Machines" pane (center), right-click on the VM
+         you want to modify and select "Settings...".
+   4. Select the Hard Drive:
+       * In the VM's settings window, under the "Hardware" section,
+         select the "Hard Drive" you want to expand. (If your VM has
+         multiple virtual hard drives, make sure you select the correct
+         one).
+   5. Edit the Virtual Hard Disk:
+       * Click the "Edit" button. This will open the "Edit Virtual Hard
+         Disk Wizard".
+   6. Choose Action:
+       * On the "Choose Action" page, select "Expand" and click "Next".
+   7. Configure Disk:
+       * On the "Configure Disk" page, enter the new, larger size for
+         your virtual hard disk in gigabytes (GB). This should be the
+         total size you want, not just the amount you want to add.
+       * Click "Next".
+   8. Summary and Finish:
+       * Review the summary and click "Finish" to apply the changes to
+         the virtual hard disk file.
+
+  Part 2: Extend the Partition (Inside the Virtual Machine's Guest OS)
+
+
+  After expanding the virtual hard disk file, the guest operating system
+  inside the VM will see the unallocated space, but its existing
+  partition won't automatically use it. You need to extend the partition.
+
+  For Windows Guest OS:
+
+
+   1. Start the Virtual Machine: Boot up the VM.
+   2. Open Disk Management:
+       * Right-click the Start button and select "Disk Management".
+   3. Extend Volume:
+       * In Disk Management, you should see your main drive with
+         unallocated space next to it.
+       * Right-click on the partition you want to extend (usually C:
+         drive) and select "Extend Volume...".
+   4. Follow Wizard:
+       * Follow the "Extend Volume Wizard" prompts. It will typically
+         select all available unallocated space by default.
+       * Click "Next" and "Finish".
+
+  For Linux Guest OS:
+
+
+  The process for Linux can vary depending on the distribution and
+  whether you're using LVM (Logical Volume Management). Here's a general
+  approach:
+
+
+   1. Start the Virtual Machine: Boot up the VM.
+   2. Identify the Disk and Partition:
+       * Open a terminal.
+       * Use lsblk or fdisk -l to identify your disk (e.g., /dev/sda) and
+         the partition you want to extend (e.g., /dev/sda1).
+   3. Resize the Partition (using `fdisk` or `parted`):
+       * This step is more complex and carries a risk of data loss if not
+         done carefully. It's often recommended to use a live CD/USB for
+         this, but it can sometimes be done on a running system if the
+         partition is not mounted or is the root partition (which is
+         tricky).
+       * Using `fdisk` (for MBR partitions) or `gdisk` (for GPT
+         partitions): You'll typically delete the existing partition
+         entry and recreate it with the new, larger size, ensuring it
+         starts at the same sector. Be extremely careful here.
+       * Using `parted`: parted /dev/sda then resizepart 1 (assuming
+         partition 1) and specify the new end size.
+   4. Resize the Filesystem:
+       * After resizing the partition, you need to resize the filesystem
+         on that partition.
+       * For ext4 filesystems: sudo resize2fs /dev/sda1 (replace
+         /dev/sda1 with your partition).
+       * For xfs filesystems: sudo xfs_growfs /mount/point (replace
+         /mount/point with the mount point of your filesystem).
+
+
+  Important Considerations:
+
+
+   * Backups: Always back up your VM before performing disk operations.
+   * Snapshots: If you have Hyper-V checkpoints (snapshots), consider
+     creating one before you start, but be aware that expanding a disk
+     can sometimes complicate snapshot management. It's often safer to
+     delete snapshots before expanding and create new ones afterward
+   * Dynamic vs. Fixed Disks: Expanding works best with dynamically
+     expanding virtual hard disks. Fixed-size disks can also be expanded,
+     but the process might be slightly different or require more host disk
+      space upfront.
+*************************************************************************************************************************************************************
+
+
 
 Comprehensive Data Analysis (Days 3-5)
 
