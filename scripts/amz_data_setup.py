@@ -372,6 +372,7 @@ def main():
     if args.quick:
         data = setup.quick_setup_small_dataset()
     else:
+        setup.download_category_data(args.category)
         data = setup.convert_to_standard_format(args.category, args.max_records)
         setup.save_processed_data(data, args.category)
     
