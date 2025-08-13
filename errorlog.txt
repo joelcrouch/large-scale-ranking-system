@@ -1,0 +1,219 @@
+Building wheel for implicit (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+  
+  × Building wheel for implicit (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [145 lines of output]
+      /tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved :: MIT License
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      
+      
+      --------------------------------------------------------------------------------
+      -- Trying 'Ninja' generator
+      --------------------------------
+      ---------------------------
+      ----------------------
+      -----------------
+      ------------
+      -------
+      --
+      Not searching for unused variables given on the command line.
+      CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+        Compatibility with CMake < 3.10 will be removed from a future version of
+        CMake.
+      
+        Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+        to tell CMake that the project requires at least <min> but has been updated
+        to work with policies introduced by <max> or earlier.
+      
+      
+      -- The C compiler identification is GNU 13.3.0
+      -- Detecting C compiler ABI info
+      -- Detecting C compiler ABI info - done
+      -- Check for working C compiler: /usr/bin/cc - skipped
+      -- Detecting C compile features
+      -- Detecting C compile features - done
+      -- The CXX compiler identification is GNU 13.3.0
+      -- Detecting CXX compiler ABI info
+      -- Detecting CXX compiler ABI info - done
+      -- Check for working CXX compiler: /usr/bin/c++ - skipped
+      -- Detecting CXX compile features
+      -- Detecting CXX compile features - done
+      -- Configuring done (1.0s)
+      -- Generating done (0.0s)
+      -- Build files have been written to: /tmp/pip-install-q082lel4/implicit_2894c20073a24a11ab1db036d092b619/_cmake_test_compile/build
+      --
+      -------
+      ------------
+      -----------------
+      ----------------------
+      ---------------------------
+      --------------------------------
+      -- Trying 'Ninja' generator - success
+      --------------------------------------------------------------------------------
+      
+      Configuring Project
+        Working directory:
+          /tmp/pip-install-q082lel4/implicit_2894c20073a24a11ab1db036d092b619/_skbuild/linux-x86_64-3.12/cmake-build
+        Command:
+          /tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/cmake/data/bin/cmake /tmp/pip-install-q082lel4/implicit_2894c20073a24a11ab1db036d092b619 -G Ninja -DCMAKE_MAKE_PROGRAM:FILEPATH=ninja --no-warn-unused-cli -DCMAKE_INSTALL_PREFIX:PATH=/tmp/pip-install-q082lel4/implicit_2894c20073a24a11ab1db036d092b619/_skbuild/linux-x86_64-3.12/cmake-install -DPYTHON_VERSION_STRING:STRING=3.12.3 -DSKBUILD:INTERNAL=TRUE -DCMAKE_MODULE_PATH:PATH=/tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/skbuild/resources/cmake -DPYTHON_EXECUTABLE:PATH=/home/r-dev1/dev/large-scale-ranking-system/venv/bin/python3 -DPYTHON_INCLUDE_DIR:PATH=/usr/include/python3.12 -DPython_EXECUTABLE:PATH=/home/r-dev1/dev/large-scale-ranking-system/venv/bin/python3 -DPython_ROOT_DIR:PATH=/home/r-dev1/dev/large-scale-ranking-system/venv -DPython_FIND_REGISTRY:STRING=NEVER -DPython_INCLUDE_DIR:PATH=/usr/include/python3.12 -DPython_NumPy_INCLUDE_DIRS:PATH=/tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/numpy/_core/include -DPython3_EXECUTABLE:PATH=/home/r-dev1/dev/large-scale-ranking-system/venv/bin/python3 -DPython3_ROOT_DIR:PATH=/home/r-dev1/dev/large-scale-ranking-system/venv -DPython3_FIND_REGISTRY:STRING=NEVER -DPython3_INCLUDE_DIR:PATH=/usr/include/python3.12 -DPython3_NumPy_INCLUDE_DIRS:PATH=/tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/numpy/_core/include -DCMAKE_MAKE_PROGRAM:FILEPATH=ninja -DCMAKE_BUILD_TYPE:STRING=Release
+      
+      Not searching for unused variables given on the command line.
+      -- The C compiler identification is GNU 13.3.0
+      -- The CXX compiler identification is GNU 13.3.0
+      -- Detecting C compiler ABI info
+      -- Detecting C compiler ABI info - done
+      -- Check for working C compiler: /usr/bin/cc - skipped
+      -- Detecting C compile features
+      -- Detecting C compile features - done
+      -- Detecting CXX compiler ABI info
+      -- Detecting CXX compiler ABI info - done
+      -- Check for working CXX compiler: /usr/bin/c++ - skipped
+      -- Detecting CXX compile features
+      -- Detecting CXX compile features - done
+      CMake Warning (dev) at /tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/skbuild/resources/cmake/FindPythonExtensions.cmake:245 (find_package):
+        Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+        are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+        the cmake_policy command to set the policy and suppress this warning.
+      
+      Call Stack (most recent call first):
+        CMakeLists.txt:7 (find_package)
+      This warning is for project developers.  Use -Wno-dev to suppress it.
+      
+      -- Found PythonInterp: /home/r-dev1/dev/large-scale-ranking-system/venv/bin/python3 (found version "3.12.3")
+      CMake Warning (dev) at /tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/skbuild/resources/cmake/FindPythonExtensions.cmake:248 (find_package):
+        Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+        are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+        the cmake_policy command to set the policy and suppress this warning.
+      
+      Call Stack (most recent call first):
+        CMakeLists.txt:7 (find_package)
+      This warning is for project developers.  Use -Wno-dev to suppress it.
+      
+      -- Found PythonLibs: no-library-required
+      -- Found Cython: /tmp/pip-build-env-2ek1_i_7/overlay/bin/cython
+      -- Found OpenMP_C: -fopenmp (found version "4.5")
+      -- Found OpenMP_CXX: -fopenmp (found version "4.5")
+      -- Found OpenMP: TRUE (found version "4.5")
+      _modinit_prefix:PyInit_
+      _modinit_prefix:PyInit_
+      _modinit_prefix:PyInit_
+      _modinit_prefix:PyInit_
+      _modinit_prefix:PyInit_
+      _modinit_prefix:PyInit_
+      -- Could not find nvcc, please set CUDAToolkit_ROOT.
+      -- Configuring done (1.5s)
+      -- Generating done (0.0s)
+      -- Build files have been written to: /tmp/pip-install-q082lel4/implicit_2894c20073a24a11ab1db036d092b619/_skbuild/linux-x86_64-3.12/cmake-build
+      [1/19] Generating CXX source implicit/cpu/topk.cxx
+      [2/19] Building CXX object implicit/cpu/CMakeFiles/topk.dir/topk.cxx.o
+      FAILED: [code=1] implicit/cpu/CMakeFiles/topk.dir/topk.cxx.o
+      /usr/bin/c++ -Dtopk_EXPORTS -I/tmp/pip-install-q082lel4/implicit_2894c20073a24a11ab1db036d092b619/. -I/usr/include/python3.12 -O3 -DNDEBUG -std=gnu++11 -fPIC -fopenmp -MD -MT implicit/cpu/CMakeFiles/topk.dir/topk.cxx.o -MF implicit/cpu/CMakeFiles/topk.dir/topk.cxx.o.d -o implicit/cpu/CMakeFiles/topk.dir/topk.cxx.o -c /tmp/pip-install-q082lel4/implicit_2894c20073a24a11ab1db036d092b619/_skbuild/linux-x86_64-3.12/cmake-build/implicit/cpu/topk.cxx
+      /tmp/pip-install-q082lel4/implicit_2894c20073a24a11ab1db036d092b619/_skbuild/linux-x86_64-3.12/cmake-build/implicit/cpu/topk.cxx:11:10: fatal error: Python.h: No such file or directory
+         11 | #include "Python.h"
+            |          ^~~~~~~~~~
+      compilation terminated.
+      [3/19] Generating CXX source implicit/evaluation.cxx
+      [4/19] Generating CXX source implicit/_nearest_neighbours.cxx
+      [5/19] Generating CXX source implicit/cpu/bpr.cxx
+      [6/19] Generating CXX source implicit/cpu/lmf.cxx
+      [7/19] Generating CXX source implicit/cpu/_als.cxx
+      ninja: build stopped: subcommand failed.
+      Traceback (most recent call last):
+        File "/tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/skbuild/setuptools_wrap.py", line 668, in setup
+          cmkr.make(make_args, install_target=cmake_install_target, env=env)
+        File "/tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/skbuild/cmaker.py", line 696, in make
+          self.make_impl(clargs=clargs, config=config, source_dir=source_dir, install_target=install_target, env=env)
+        File "/tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/skbuild/cmaker.py", line 741, in make_impl
+          raise SKBuildError(msg)
+      
+      An error occurred while building with CMake.
+        Command:
+          /tmp/pip-build-env-2ek1_i_7/overlay/lib/python3.12/site-packages/cmake/data/bin/cmake --build . --target install --config Release --
+        Install target:
+          install
+        Source directory:
+          /tmp/pip-install-q082lel4/implicit_2894c20073a24a11ab1db036d092b619
+        Working directory:
+          /tmp/pip-install-q082lel4/implicit_2894c20073a24a11ab1db036d092b619/_skbuild/linux-x86_64-3.12/cmake-build
+      Please check the install target is valid and see CMake's output for more information.
+      
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for implicit
+  Building wheel for annoy (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+  
+  × Building wheel for annoy (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [18 lines of output]
+      /tmp/pip-build-env-a53iv_ue/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+        warnings.warn(msg)
+      running bdist_wheel
+      running build
+      running build_py
+      creating build/lib.linux-x86_64-cpython-312/annoy
+      copying annoy/__init__.py -> build/lib.linux-x86_64-cpython-312/annoy
+      copying annoy/__init__.pyi -> build/lib.linux-x86_64-cpython-312/annoy
+      copying annoy/py.typed -> build/lib.linux-x86_64-cpython-312/annoy
+      running build_ext
+      building 'annoy.annoylib' extension
+      creating build/temp.linux-x86_64-cpython-312/src
+      x86_64-linux-gnu-g++ -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -fPIC -I/home/r-dev1/dev/large-scale-ranking-system/venv/include -I/usr/include/python3.12 -c src/annoymodule.cc -o build/temp.linux-x86_64-cpython-312/src/annoymodule.o -D_CRT_SECURE_NO_WARNINGS -fpermissive -march=native -O3 -ffast-math -fno-associative-math -DANNOYLIB_MULTITHREADED_BUILD -std=c++14
+      src/annoymodule.cc:17:10: fatal error: Python.h: No such file or directory
+         17 | #include "Python.h"
+            |          ^~~~~~~~~~
+      compilation terminated.
+      error: command '/usr/bin/x86_64-linux-gnu-g++' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for annoy
+  Building wheel for hnswlib (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+  
+  × Building wheel for hnswlib (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [23 lines of output]
+      running bdist_wheel
+      running build
+      running build_ext
+      creating tmp
+      x86_64-linux-gnu-g++ -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -fPIC -I/home/r-dev1/dev/large-scale-ranking-system/venv/include -I/usr/include/python3.12 -c /tmp/tmp11vvjf8z.cpp -o tmp/tmp11vvjf8z.o -std=c++14
+      x86_64-linux-gnu-g++ -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -fPIC -I/home/r-dev1/dev/large-scale-ranking-system/venv/include -I/usr/include/python3.12 -c /tmp/tmp7gn1jnic.cpp -o tmp/tmp7gn1jnic.o -fvisibility=hidden
+      checking avalability of flag: -march=native
+      x86_64-linux-gnu-g++ -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -fPIC -I/home/r-dev1/dev/large-scale-ranking-system/venv/include -I/usr/include/python3.12 -c /tmp/tmpy7lkez8y.cpp -o tmp/tmpy7lkez8y.o -march=native
+      flag: -march=native is available
+      building 'hnswlib' extension
+      creating build/temp.linux-x86_64-cpython-312/python_bindings
+      x86_64-linux-gnu-g++ -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -fPIC -I/tmp/pip-build-env-n__0qx5m/overlay/lib/python3.12/site-packages/pybind11/include -I/tmp/pip-build-env-n__0qx5m/overlay/lib/python3.12/site-packages/numpy/_core/include -I./hnswlib/ -I/home/r-dev1/dev/large-scale-ranking-system/venv/include -I/usr/include/python3.12 -c ./python_bindings/bindings.cpp -o build/temp.linux-x86_64-cpython-312/python_bindings/bindings.o -O3 -march=native -fopenmp -DVERSION_INFO=\"0.8.0\" -std=c++14 -fvisibility=hidden
+      In file included from /tmp/pip-build-env-n__0qx5m/overlay/lib/python3.12/site-packages/pybind11/include/pybind11/detail/common.h:12,
+                       from /tmp/pip-build-env-n__0qx5m/overlay/lib/python3.12/site-packages/pybind11/include/pybind11/attr.h:13,
+                       from /tmp/pip-build-env-n__0qx5m/overlay/lib/python3.12/site-packages/pybind11/include/pybind11/detail/class.h:12,
+                       from /tmp/pip-build-env-n__0qx5m/overlay/lib/python3.12/site-packages/pybind11/include/pybind11/pybind11.h:12,
+                       from /tmp/pip-build-env-n__0qx5m/overlay/lib/python3.12/site-packages/pybind11/include/pybind11/functional.h:12,
+                       from ./python_bindings/bindings.cpp:2:
+      /tmp/pip-build-env-n__0qx5m/overlay/lib/python3.12/site-packages/pybind11/include/pybind11/conduit/wrap_include_python_h.h:44:10: fatal error: Python.h: No such file or directory
+         44 | #include <Python.h>
+            |          ^~~~~~~~~~
+      compilation terminated.
+      error: command '/usr/bin/x86_64-linux-gnu-g++' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for hnswlib
+Failed to build implicit annoy hnswlib
+ERROR: Could not build wheels for implicit, annoy, hnswlib, which is required to install pyproject.toml-based projects
+
